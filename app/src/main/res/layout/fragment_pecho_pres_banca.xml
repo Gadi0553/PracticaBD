@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- ImageView for displaying an image -->
+
+    <!-- Label for the EditText -->
+
+    <!-- EditText for input -->
+
+    <!-- Label for the buttons -->
+
+    <!-- Button to delete -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="436dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Image"
+        android:src="@drawable/barra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539" />
+
+    <!-- Button to update -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

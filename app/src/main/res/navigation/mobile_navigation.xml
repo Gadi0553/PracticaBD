@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.practica1.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_pecho2"
+            app:destination="@id/pecho2" />
+        <action
+            android:id="@+id/action_nav_home_to_hombro"
+            app:destination="@id/hombro" />
+        <action
+            android:id="@+id/action_nav_home_to_espalda"
+            app:destination="@id/espalda" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.practica1.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.practica1.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/pecho2"
+        android:name="com.example.practica1.ui.home.Pecho"
+        android:label="fragment_pecho"
+        tools:layout="@layout/fragment_pecho" >
+        <action
+            android:id="@+id/action_pecho2_to_pechoPresBanca"
+            app:destination="@id/pechoPresBanca" />
+    </fragment>
+    <fragment
+        android:id="@+id/hombro"
+        android:name="com.example.practica1.ui.home.Hombro"
+        android:label="fragment_hombro"
+        tools:layout="@layout/fragment_hombro" />
+    <fragment
+        android:id="@+id/espalda"
+        android:name="com.example.practica1.ui.home.Espalda"
+        android:label="fragment_espalda"
+        tools:layout="@layout/fragment_espalda" />
+    <fragment
+        android:id="@+id/pechoPresBanca"
+        android:name="com.example.practica1.ui.home.PechoPresBanca"
+        android:label="fragment_pecho_pres_banca"
+        tools:layout="@layout/fragment_pecho_pres_banca" >
+        <action
+            android:id="@+id/action_pechoPresBanca_to_pecho2"
+            app:destination="@id/pecho2" />
+        <action
+            android:id="@+id/action_pechoPresBanca_to_modalPechoPresBanca"
+            app:destination="@id/modalPechoPresBanca" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/modalPechoPresBanca"
+        android:name="com.example.practica1.ui.home.ModalPechoPresBanca"
+        android:label="fragment_modal_pecho_pres_banca"
+        tools:layout="@layout/fragment_modal_pecho_pres_banca" >
+        <action
+            android:id="@+id/action_modalPechoPresBanca_to_pechoPresBanca"
+            app:destination="@id/pechoPresBanca" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
